@@ -1,0 +1,127 @@
+:root {
+  --shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: rgba(112, 112, 112, 0.2);
+}
+
+.box {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: orangered;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+}
+
+.box__header {
+  color: #fff;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  animation-name: headerRun;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes headerRun {
+  0% {
+    transform: translateX(-4rem) scale(1.2);
+  }
+  25% {
+    transform: translateX(0rem) scale(1);
+  }
+  50% {
+    transform: translateX(4rem) scale(1.2);
+  }
+  75% {
+    transform: translateX(0rem) scale(1);
+  }
+  100% {
+    transform: translateX(-4rem) scale(1.2);
+  }
+}
+.add__icon,
+.delete__icon {
+  display: flex;
+  padding: 2rem;
+  margin: 2rem;
+  font-size: 3.6rem;
+  color: white;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.add__icon:hover {
+  background-color: rgb(120, 9, 224);
+  transform: translateY(-3px) scale(1.1);
+}
+.delete__icon:hover {
+  background-color: rgb(120, 9, 224);
+  transform: translateY(-3px) scale(1.1) rotateY(180deg);
+}
+
+.dropzone {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: orange;
+  height: 70vh;
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dropzone__droptable {
+  margin: 1rem;
+  width: 50%;
+  background-color: plum;
+  box-shadow: var(--shadow);
+  overflow-y: hidden;
+}
+
+.dropzone__header {
+  background-color: bisque;
+  padding: 2rem;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  box-shadow: var(--shadow);
+}
+
+.dropzone__items {
+  height: 100%;
+  overflow-y: scroll;
+}
+.dropzone__dropitem {
+  margin: 1rem;
+  background-color: navy;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}

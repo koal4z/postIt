@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>postIt</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="box">
+      <div class="box__add">
+        <ion-icon name="add-outline" class="add__icon"></ion-icon>
+      </div>
+      <div class="box__header">
+        Post It
+      </div>
+      <div class="box__delete">
+        <ion-icon name="trash-outline" class="delete__icon"></ion-icon>
+      </div>
+    </section>
+
+    <section class="dropzone">
+      <div class="dropzone__droptable">
+        <div class="dropzone__header">Top Content</div>
+        <div class="dropzone__items" id="add">
+          <div class="dropzone__dropitem" draggable="true">Click + to new content</div>
+          <div class="dropzone__dropitem" draggable="true">Click here for edit Text</div>
+          <div class="dropzone__dropitem" draggable="true">Drag bin to delete</div>
+          <div class="dropzone__dropitem" draggable="true">Enjoy my post it</div>
+        </div>
+      </div>
+      <div class="dropzone__droptable">
+        <div class="dropzone__header">Top Content</div>
+        <div class="dropzone__items"></div>
+      </div>
+      <div class="dropzone__droptable">
+        <div class="dropzone__header">Top Content</div>
+        <div class="dropzone__items"></div>
+      </div>
+      <div class="dropzone__droptable">
+        <div class="dropzone__header">Top Content</div>
+        <div class="dropzone__items"></div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>
